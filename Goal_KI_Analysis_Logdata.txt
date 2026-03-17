@@ -1,0 +1,45 @@
+Goal:
+KI should be used for analysing a huge amount of log data.
+
+With help from KI the kibana log data should,
+be analysed to get a quick overview about the system status.
+
+The successful and the failed requests should be shown quantified.
+
+The error message should be classified and quantified.
+
+The most frequent error messages should be listed.
+The details should be shown in a separate view/file/link.
+
+The data should be processed only on the local machine.
+No upload from log data to any KI server outside the local machine.
+
+The log data should be treated confidentially.
+
+The passwords and token (sensitive data) should be masked.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+log_data_pandas_numpy_tensorflow.py
+
+Input file: myLogVar_20_rows.csv
+ReturnCode, Duration, Text
+200,        133,      1000
+500,        54,       3000
+
+
+Data are loaded from csv file.
+Data are splitted in features and labels.
+Data are normalized.
+
+Tensorflow model (here: sequential) is created
+   and initialized with the normalized data
+Model is compiled
+Model is trained
+Model is evaluated
+Predictions are made
+Results are printed to console
+   Given: Duration:  51 , Text:  3000  predicted return code: [[0.809]]
+    1/1 ━━━━━━━━━━━━━━━━━━━━ 0s 21ms/step
+   Given Duration:  51 Denormalisied return code: [[502.037]]
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
